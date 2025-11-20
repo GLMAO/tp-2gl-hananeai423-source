@@ -1,14 +1,17 @@
 package com.polytech.tp;
 
-public class Etudiant {
+public class Etudiant implements Observer {
     private String nom;
 
     public Etudiant(String nom) {
         this.nom = nom;
     }
 
-    
+    @Override
     public void update(String message) {
         System.out.println("Notification pour l'étudiant " + nom + " : " + message);
+    }
+     public String getNom() {
+        return nom;
     }
 }
